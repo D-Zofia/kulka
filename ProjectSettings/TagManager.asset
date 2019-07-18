@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dno
   - platform
+  - proste
   layers:
   - Default
   - TransparentFX
