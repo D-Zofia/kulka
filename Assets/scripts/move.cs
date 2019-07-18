@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class move : MonoBehaviour
 {
-    public float speed=5f;
+    public float speed=500f;
     public Canvas dead;
     public Canvas pause;
 
-    float obrot = 2;
+    
     private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -23,23 +23,23 @@ public class move : MonoBehaviour
         
             if (Input.GetKey("left")||Input.GetKey(KeyCode.A))
             {
-                rb.AddTorque(Vector3.forward * obrot);
-                rb.AddForce(Vector3.left * speed);
+                rb.AddTorque(Vector3.forward * speed/20f*Time.deltaTime);
+                rb.AddForce(Vector3.left * speed * Time.deltaTime);
             }
             if (Input.GetKey("right") || Input.GetKey(KeyCode.D))
             {
-                rb.AddTorque(Vector3.back * obrot);
-                rb.AddForce(Vector3.right * speed);
+                rb.AddTorque(Vector3.back * speed / 20f * Time.deltaTime);
+                rb.AddForce(Vector3.right * speed * Time.deltaTime);
             }
             if (Input.GetKey("up") || Input.GetKey(KeyCode.W))
             {
-                rb.AddTorque(Vector3.right * obrot);
-                rb.AddForce(Vector3.forward * speed);
+                rb.AddTorque(Vector3.right * speed / 20f * Time.deltaTime);
+                rb.AddForce(Vector3.forward * speed * Time.deltaTime);
             }
             if (Input.GetKey("down") || Input.GetKey(KeyCode.S))
             {
-                rb.AddTorque(Vector3.left * obrot);
-                rb.AddForce(Vector3.back * speed);
+                rb.AddTorque(Vector3.left * speed / 20f * Time.deltaTime);
+                rb.AddForce(Vector3.back * speed * Time.deltaTime);
             }
             if (Input.GetKey(KeyCode.P))
             {
