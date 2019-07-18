@@ -1976,6 +1976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sledz: {fileID: 1727341719}
+  przesuniecie: {x: 8, y: 7, z: -14}
 --- !u!1001 &1057190350
 PrefabInstance:
   m_ObjectHideFlags: 0
